@@ -19,14 +19,34 @@ wait.until(EC.presence_of_element_located((By.XPATH, '//*[@id="header"]/div[2]/d
 #except Exception as e:
 #    print('The error is: ', e)
 
-number = 1
-while number < 9:
-    try:
-        action.move_to_element(driver.find_element(By.XPATH, '//*[@id="header"]/div[2]/div/nav/ul/li['+str(number)+']/a/h3')).perform()
-        time.sleep(4)
-        number += 1
-    except Exception as e:
-        print('The error is: ', e)
+#number = 1
+#while number < 9:
+#    try:
+#        action.move_to_element(driver.find_element(By.XPATH, '//*[@id="header"]/div[2]/div/nav/ul/li['+str(number)+']/a/h3')).perform()
+#        time.sleep(4)
+#        number += 1
+#    except Exception as e:
+#        print('The error is: ', e)
+
+
+action.move_to_element(driver.find_element(By.XPATH, '//*[@id="header"]/div[2]/div/nav/ul/li[1]]/a/h3')).perform()
+time.sleep(8)
+
+
+
+try:
+    options = driver.find_elements(By.XPATH, '//*[@id="firstLevelList"]/li/div[1]/div/ul')
+    for opt in options:
+        print(opt)
+except Exception as e:
+    print('The error is: ', e)
+
+#//*[@id="firstLevelList"]/li/div[2]
+#//*[@id="firstLevelList"]/li/div[1]/div/ul/li[1]
+
+
+
+#//*[@id="firstLevelList"]/li/div[1]
 
 #action.move_to_element(driver.find_element(By.XPATH, '//*[@id="header"]/div[2]/div/nav/ul/li{number}]/a/h3')).perform()
 #time.sleep(8)
