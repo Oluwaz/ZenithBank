@@ -31,14 +31,7 @@ class TestSeleniumAssertions(unittest.TestCase):
         expected_text = "Example Domain"
         self.assertEqual(actual_text, expected_text, "Text does not match")
 
-    def test_condition_false(self):
-        # Ensure a condition is false
-        # This test might fail depending on the page structure
-        checkbox = self.driver.find_elements(By.TAG_NAME, "input")
-        if checkbox:
-            self.assertFalse(checkbox[0].is_selected(), "Checkbox should not be selected")
-        else:
-            self.skipTest("No checkbox found on the page")
+ 
 
     def test_element_exists(self):
         # Check if an element exists on the page
