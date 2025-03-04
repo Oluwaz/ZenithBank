@@ -28,5 +28,3 @@ if post_response.status_code == 302:
     assert final_response.url == "https://example.com/dashboard"  # Example assertion
 else:
     assert post_response.status_code == 200  # Example assertion
-	
-	
