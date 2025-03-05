@@ -32,8 +32,6 @@ class TestSeleniumAssertions(unittest.TestCase):
         expected_text = "Example Domain"
         self.assertEqual(actual_text, expected_text, "Text does not match")
 
- 
-
     def test_element_exists(self):
         # Check if an element exists on the page
         elements = self.driver.find_elements(By.TAG_NAME, "p")
