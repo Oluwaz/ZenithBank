@@ -24,11 +24,6 @@ try:
 except Exception as e:
     print('The error is: ', e)
 
-
-
-
-
-
 Personal = driver.find_element(By.XPATH, '//*[@id="header"]/div[2]/div/nav/ul/li[1]/a/h3')
 
 action.move_to_element(Personal).perform()
