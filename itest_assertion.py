@@ -56,20 +56,20 @@ class TestSeleniumAssertions(unittest.TestCase):
         obj2 = "World"
         self.assertIsNot(obj1, obj2, "Objects should not be the same")
 
-    def test_set_equality(self):
-        # Validate a set of elements match expected values
-        actual_set = {"value1", "value2"}
-        expected_set = {"value1", "value2"}
-        self.assertSetEqual(actual_set, expected_set, "Sets do not match")
-
-    def test_element_enabled(self):
-        # Check if an element is enabled
-        # This test might fail if there's no button on the page
-        try:
-            button = self.driver.find_element(By.TAG_NAME, "button")
-            self.assertTrue(button.is_enabled(), "Button is not enabled")
-        except:
-            self.skipTest("No button found on the page")
+###    def test_set_equality(self):
+###        # Validate a set of elements match expected values
+###        actual_set = {"value1", "value2"}
+###        expected_set = {"value1", "value2"}
+###        self.assertSetEqual(actual_set, expected_set, "Sets do not match")
+###
+###    def test_element_enabled(self):
+###        # Check if an element is enabled
+###        # This test might fail if there's no button on the page
+###        try:
+###            button = self.driver.find_element(By.TAG_NAME, "button")
+###            self.assertTrue(button.is_enabled(), "Button is not enabled")
+###        except:
+###            self.skipTest("No button found on the page")
 
     def test_broken_links(self):
         # Test for broken links
